@@ -54,7 +54,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm" action="mailto:someone@example.com" method="post" enctype="text/plain">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Introduce tu nombre..." data-sb-validations="required" />
@@ -98,7 +98,11 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">¡Error enviando el mensaje!</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button></div>
+                            <div class="d-grid">
+                                <a href="mailto:martinez.andreu@gmail.com?Subject=contacto">
+                                    <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar por correo</button>
+                                </a>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -106,8 +110,12 @@
         </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div>
-                <a class="nav-link small text-center text-muted" href="https://www.linkedin.com/in/andreumartineznuevo/" target="_blank" alt="amn linkedin page">AMN69</a>
+            <div class="container px-4 px-lg-5 d-flex justify-content-around">
+                <div class="d-flex">
+                    <p class="nav-link small text-center text-muted fs-20 me-0 pe-0">©</p>
+                    <a class="nav-link small text-center fs-20 amn-text-orange2 ms-0 ps-1" href="index.html" target="_blank" alt="Víctor page">Víctor González</a>             
+                </div>
+                <a class="nav-link small text-center text-muted fs-20" style="--bs-text-opacity: .5;" href="https://www.linkedin.com/in/andreumartineznuevo/" target="_blank" alt="amn linkedin page">AMN69</a>
             </div>
         </footer>
         <!-- Bootstrap core JS-->

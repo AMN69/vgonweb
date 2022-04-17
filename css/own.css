@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/*!
+* own css modified for interest
+ */
+
+.amn-text-orange2 {
+  --bs-text-opacity: 1;
+  color: var(--bs-orange) !important;
+}
+
+.amn-text-justify {
+  text-align: justify;
+}

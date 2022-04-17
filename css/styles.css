@@ -7761,11 +7761,6 @@ textarea.form-control-lg {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
-.amn-text-orange2 {
-  --bs-text-opacity: 1;
-  color: var(--bs-orange) !important;
-}
-
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;

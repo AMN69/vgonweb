@@ -46,7 +46,7 @@
                         <hr class="divider" />
                         <br></br>
                         <p class="text-muted mb-3">Si quieres contactar conmigo o saber más sobre los servicios que ofrezco puedes 
-                            hacerlo directamente contactándome al siguiente email, teléfono o a través de LinkedIn.</p>
+                            hacerlo directamente contactándome al siguiente email, teléfono o a través de LinkedIn o rellenando el formulario.</p>
                         <br></br>
                         <br></br>
                         <i class="bi bi-envelope fs-1 text-primary">
@@ -63,7 +63,71 @@
                         <br></br>
                         <br></br>
                         <br></br>
-                        </div>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="formname" class="form-label">Nombre (obligatorio)</label>
+                                <input class="form-control" type="text" id="formname" aria-label="default input example" required>
+                                <div class="valid-feedback">
+                                    Correcto, gracias.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, indique su nombre.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formemail" class="form-label">Email (obligatorio)</label>
+                                <input type="email" class="form-control" id="formemail" required>
+                                <div class="valid-feedback">
+                                    Correcto, gracias.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, indique su dirección de email.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formphone" class="form-label">Teléfono</label>
+                                <input class="form-control" type="text" id="formphone" aria-label="default input example">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formsubject" class="form-label">Asunto (obligatorio)</label>
+                                <input class="form-control" type="text" id="formsubject" aria-label="default input example" required>
+                                <div class="valid-feedback">
+                                    Correcto, gracias.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, indique el motivo de su mensaje.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formmessage" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="formmessage" rows="6"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                            </div>
+                        </form>
+                        <script>
+                            // Example starter JavaScript for disabling form submissions if there are invalid fields
+                            (function () {
+                            'use strict'
+                
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.querySelectorAll('.needs-validation')
+                
+                            // Loop over them and prevent submission
+                            Array.prototype.slice.call(forms)
+                                .forEach(function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (!form.checkValidity()) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                    }
+                
+                                    form.classList.add('was-validated')
+                                }, false)
+                                })
+                            })()
+                        </script>
                 </div>
             </div>
         </section>

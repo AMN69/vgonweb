@@ -66,7 +66,7 @@
                         <form class="row g-3 needs-validation" novalidate>
                             <div class="mb-3">
                                 <label for="formname" class="form-label">Nombre (obligatorio)</label>
-                                <input class="form-control" type="text" id="formname" aria-label="default input example" required>
+                                <input class="form-control" type="text" id="formname" name="name" aria-label="default input example" required>
                                 <div class="valid-feedback">
                                     Correcto, gracias.
                                 </div>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formemail" class="form-label">Email (obligatorio)</label>
-                                <input type="email" class="form-control" id="formemail" required>
+                                <input type="email" class="form-control" id="formemail" name="email" required>
                                 <div class="valid-feedback">
                                     Correcto, gracias.
                                 </div>
@@ -86,11 +86,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formphone" class="form-label">Teléfono</label>
-                                <input class="form-control" type="text" id="formphone" aria-label="default input example">
+                                <input class="form-control" type="text" id="formphone" name="phone" aria-label="default input example">
                             </div>
                             <div class="mb-3">
                                 <label for="formsubject" class="form-label">Asunto (obligatorio)</label>
-                                <input class="form-control" type="text" id="formsubject" aria-label="default input example" required>
+                                <input class="form-control" type="text" id="formsubject" name="subject" aria-label="default input example" required>
                                 <div class="valid-feedback">
                                     Correcto, gracias.
                                 </div>
@@ -100,10 +100,10 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formmessage" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="formmessage" rows="6"></textarea>
+                                <textarea class="form-control" id="formmessage" name="message" rows="6"></textarea>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                                <button class="btn btn-primary" type="submit" formmethod="post" formtarget="_blank" formaction="http://localhost:3000/users/emailtovgt">Enviar formulario</button>
                             </div>
                         </form>
                         <script>
@@ -119,8 +119,10 @@
                                 .forEach(function (form) {
                                 form.addEventListener('submit', function (event) {
                                     if (!form.checkValidity()) {
-                                    event.preventDefault()
-                                    event.stopPropagation()
+                                        event.preventDefault()
+                                        event.stopPropagation()
+                                    } else {
+                                        console.log("clicked")
                                     }
                 
                                     form.classList.add('was-validated')
@@ -128,6 +130,7 @@
                                 })
                             })()
                         </script>
+                        
                 </div>
             </div>
         </section>
